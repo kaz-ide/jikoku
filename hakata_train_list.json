@@ -1,0 +1,1833 @@
+{
+  "weekday": [
+    {
+      "day_type": "weekday",
+      "hour": 5,
+      "minute": 13,
+      "dep_time": "05:13",
+      "dest": "大牟田",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0001/00011001.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 5,
+      "minute": 52,
+      "dep_time": "05:52",
+      "dest": "鳥栖",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0024/00248601.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 6,
+      "minute": 20,
+      "dep_time": "06:20",
+      "dest": "荒尾",
+      "type_text": "南福岡～大牟田間快速",
+      "href": "/jr-k_time/2610/0015/00158901.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 6,
+      "minute": 35,
+      "dep_time": "06:35",
+      "dest": "江北",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0022/00220301.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 6,
+      "minute": 56,
+      "dep_time": "06:56",
+      "dest": "大牟田",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0024/00248801.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 7,
+      "minute": 5,
+      "dep_time": "07:05",
+      "dest": "荒尾",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0024/00241301.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 7,
+      "minute": 20,
+      "dep_time": "07:20",
+      "dest": "二日市",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0024/00248901.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 7,
+      "minute": 25,
+      "dep_time": "07:25",
+      "dest": "南福岡",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0024/00249001.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 7,
+      "minute": 33,
+      "dep_time": "07:33",
+      "dest": "鳥栖",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0024/00249101.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 7,
+      "minute": 41,
+      "dep_time": "07:41",
+      "dest": "二日市",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0019/00198301.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 7,
+      "minute": 46,
+      "dep_time": "07:46",
+      "dest": "46",
+      "type_text": "南福岡",
+      "href": "/jr-k_time/2610/0024/00246001.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 7,
+      "minute": 52,
+      "dep_time": "07:52",
+      "dest": "52",
+      "type_text": "羽犬塚",
+      "href": "/jr-k_time/2610/0021/00212301.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 7,
+      "minute": 59,
+      "dep_time": "07:59",
+      "dest": "久留米",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0024/00249201.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 8,
+      "minute": 3,
+      "dep_time": "08:03",
+      "dest": "南福岡",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0015/00157201.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 8,
+      "minute": 9,
+      "dep_time": "08:09",
+      "dest": "二日市",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0019/00198601.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 8,
+      "minute": 19,
+      "dep_time": "08:19",
+      "dest": "19",
+      "type_text": "南福岡",
+      "href": "/jr-k_time/2610/0024/00246101.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 8,
+      "minute": 24,
+      "dep_time": "08:24",
+      "dest": "久留米",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0024/00249301.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 8,
+      "minute": 27,
+      "dep_time": "08:27",
+      "dest": "南福岡",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0019/00198701.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 8,
+      "minute": 34,
+      "dep_time": "08:34",
+      "dest": "南福岡",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0019/00198801.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 8,
+      "minute": 42,
+      "dep_time": "08:42",
+      "dest": "42",
+      "type_text": "鳥栖",
+      "href": "/jr-k_time/2610/0024/00246201.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 8,
+      "minute": 49,
+      "dep_time": "08:49",
+      "dest": "二日市",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0019/00199001.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 8,
+      "minute": 57,
+      "dep_time": "08:57",
+      "dest": "鳥栖",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0017/00172201.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 9,
+      "minute": 3,
+      "dep_time": "09:03",
+      "dest": "03",
+      "type_text": "南福岡 &nbsp;",
+      "href": "/jr-k_time/2610/0024/00246301.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 9,
+      "minute": 13,
+      "dep_time": "09:13",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0019/00199101.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 9,
+      "minute": 24,
+      "dep_time": "09:24",
+      "dest": "24",
+      "type_text": "鳥栖 二日市から各駅停車",
+      "href": "/jr-k_time/2610/0024/00246401.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 9,
+      "minute": 28,
+      "dep_time": "09:28",
+      "dest": "南福岡",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0019/00199301.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 9,
+      "minute": 36,
+      "dep_time": "09:36",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0024/00249401.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 9,
+      "minute": 54,
+      "dep_time": "09:54",
+      "dest": "久留米",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0024/00249501.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 10,
+      "minute": 8,
+      "dep_time": "10:08",
+      "dest": "二日市",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0026/00262801.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 10,
+      "minute": 18,
+      "dep_time": "10:18",
+      "dest": "南福岡",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0026/00265401.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 10,
+      "minute": 26,
+      "dep_time": "10:26",
+      "dest": "26",
+      "type_text": "羽犬塚",
+      "href": "/jr-k_time/2610/0024/00246501.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 10,
+      "minute": 36,
+      "dep_time": "10:36",
+      "dest": "荒木",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0024/00249601.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 10,
+      "minute": 56,
+      "dep_time": "10:56",
+      "dest": "56",
+      "type_text": "羽犬塚",
+      "href": "/jr-k_time/2610/0024/00246601.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 11,
+      "minute": 6,
+      "dep_time": "11:06",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00265501.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 11,
+      "minute": 26,
+      "dep_time": "11:26",
+      "dest": "26",
+      "type_text": "鳥栖 二日市から各駅停車",
+      "href": "/jr-k_time/2610/0021/00212501.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 11,
+      "minute": 33,
+      "dep_time": "11:33",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00265601.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 11,
+      "minute": 47,
+      "dep_time": "11:47",
+      "dest": "久留米",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0024/00249701.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 12,
+      "minute": 2,
+      "dep_time": "12:02",
+      "dest": "02",
+      "type_text": "羽犬塚 &nbsp;",
+      "href": "/jr-k_time/2610/0024/00246701.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 12,
+      "minute": 9,
+      "dep_time": "12:09",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00265701.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 12,
+      "minute": 26,
+      "dep_time": "12:26",
+      "dest": "26",
+      "type_text": "鳥栖 二日市から各駅停車",
+      "href": "/jr-k_time/2610/0024/00246801.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 12,
+      "minute": 43,
+      "dep_time": "12:43",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00265801.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 12,
+      "minute": 59,
+      "dep_time": "12:59",
+      "dest": "59",
+      "type_text": "羽犬塚 &nbsp;",
+      "href": "/jr-k_time/2610/0024/00246901.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 13,
+      "minute": 1,
+      "dep_time": "13:01",
+      "dest": "久留米",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0024/00249801.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 13,
+      "minute": 13,
+      "dep_time": "13:13",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00265901.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 13,
+      "minute": 26,
+      "dep_time": "13:26",
+      "dest": "26",
+      "type_text": "鳥栖 二日市から各駅停車",
+      "href": "/jr-k_time/2610/0026/00263001.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 13,
+      "minute": 43,
+      "dep_time": "13:43",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00266001.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 13,
+      "minute": 59,
+      "dep_time": "13:59",
+      "dest": "59",
+      "type_text": "羽犬塚 &nbsp;",
+      "href": "/jr-k_time/2610/0021/00212901.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 14,
+      "minute": 1,
+      "dep_time": "14:01",
+      "dest": "久留米",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0024/00249901.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 14,
+      "minute": 13,
+      "dep_time": "14:13",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00266101.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 14,
+      "minute": 26,
+      "dep_time": "14:26",
+      "dest": "26",
+      "type_text": "鳥栖 二日市から各駅停車",
+      "href": "/jr-k_time/2610/0026/00263101.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 14,
+      "minute": 41,
+      "dep_time": "14:41",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00266201.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 14,
+      "minute": 59,
+      "dep_time": "14:59",
+      "dest": "59",
+      "type_text": "羽犬塚 &nbsp;",
+      "href": "/jr-k_time/2610/0024/00247001.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 15,
+      "minute": 1,
+      "dep_time": "15:01",
+      "dest": "久留米",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0025/00250001.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 15,
+      "minute": 13,
+      "dep_time": "15:13",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00266301.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 15,
+      "minute": 26,
+      "dep_time": "15:26",
+      "dest": "26",
+      "type_text": "鳥栖 二日市から各駅停車",
+      "href": "/jr-k_time/2610/0026/00263201.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 15,
+      "minute": 37,
+      "dep_time": "15:37",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0015/00157401.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 15,
+      "minute": 49,
+      "dep_time": "15:49",
+      "dest": "49",
+      "type_text": "羽犬塚 &nbsp;",
+      "href": "/jr-k_time/2610/0021/00212601.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 15,
+      "minute": 58,
+      "dep_time": "15:58",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00266501.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 16,
+      "minute": 2,
+      "dep_time": "16:02",
+      "dest": "02",
+      "type_text": "二日市 &nbsp;",
+      "href": "/jr-k_time/2610/0026/00263301.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 16,
+      "minute": 10,
+      "dep_time": "16:10",
+      "dest": "久留米",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0025/00250101.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 16,
+      "minute": 25,
+      "dep_time": "16:25",
+      "dest": "25",
+      "type_text": "久留米 二日市から各駅停車",
+      "href": "/jr-k_time/2610/0026/00263401.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 16,
+      "minute": 38,
+      "dep_time": "16:38",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00266701.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 16,
+      "minute": 45,
+      "dep_time": "16:45",
+      "dest": "45",
+      "type_text": "鳥栖 &nbsp;",
+      "href": "/jr-k_time/2610/0021/00212701.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 16,
+      "minute": 55,
+      "dep_time": "16:55",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0025/00250301.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 17,
+      "minute": 4,
+      "dep_time": "17:04",
+      "dest": "04",
+      "type_text": "羽犬塚",
+      "href": "/jr-k_time/2610/0024/00247101.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 17,
+      "minute": 12,
+      "dep_time": "17:12",
+      "dest": "荒木",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0025/00250201.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 17,
+      "minute": 20,
+      "dep_time": "17:20",
+      "dest": "20",
+      "type_text": "羽犬塚",
+      "href": "/jr-k_time/2610/0021/00212803.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 17,
+      "minute": 26,
+      "dep_time": "17:26",
+      "dest": "鳥栖",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0026/00267201.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 17,
+      "minute": 36,
+      "dep_time": "17:36",
+      "dest": "南福岡",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0026/00267301.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 17,
+      "minute": 39,
+      "dep_time": "17:39",
+      "dest": "二日市",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0026/00267401.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 17,
+      "minute": 45,
+      "dep_time": "17:45",
+      "dest": "大牟田",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0025/00250401.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 17,
+      "minute": 54,
+      "dep_time": "17:54",
+      "dest": "早岐",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0028/00288201.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 18,
+      "minute": 4,
+      "dep_time": "18:04",
+      "dest": "04",
+      "type_text": "久留米 鳥栖から各駅停車",
+      "href": "/jr-k_time/2610/0024/00247202.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 18,
+      "minute": 14,
+      "dep_time": "18:14",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0025/00250601.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 18,
+      "minute": 23,
+      "dep_time": "18:23",
+      "dest": "23",
+      "type_text": "大牟田 &nbsp;",
+      "href": "/jr-k_time/2610/0021/00213003.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 18,
+      "minute": 33,
+      "dep_time": "18:33",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0025/00250801.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 18,
+      "minute": 42,
+      "dep_time": "18:42",
+      "dest": "42",
+      "type_text": "羽犬塚 南福岡まで各駅停車",
+      "href": "/jr-k_time/2610/0024/00247302.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 18,
+      "minute": 54,
+      "dep_time": "18:54",
+      "dest": "荒木",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0025/00250701.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 19,
+      "minute": 7,
+      "dep_time": "19:07",
+      "dest": "07",
+      "type_text": "久留米 鳥栖から各駅停車",
+      "href": "/jr-k_time/2610/0024/00247402.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 19,
+      "minute": 15,
+      "dep_time": "19:15",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0020/00200702.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 19,
+      "minute": 26,
+      "dep_time": "19:26",
+      "dest": "26",
+      "type_text": "荒尾 &nbsp;",
+      "href": "/jr-k_time/2610/0024/00240703.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 19,
+      "minute": 29,
+      "dep_time": "19:29",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0020/00200901.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 19,
+      "minute": 42,
+      "dep_time": "19:42",
+      "dest": "42",
+      "type_text": "久留米 鳥栖から各駅停車",
+      "href": "/jr-k_time/2610/0024/00247503.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 19,
+      "minute": 54,
+      "dep_time": "19:54",
+      "dest": "久留米",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0025/00250901.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 20,
+      "minute": 6,
+      "dep_time": "20:06",
+      "dest": "06",
+      "type_text": "荒尾 鳥栖から各駅停車",
+      "href": "/jr-k_time/2610/0024/00240803.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 20,
+      "minute": 12,
+      "dep_time": "20:12",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00267801.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 20,
+      "minute": 22,
+      "dep_time": "20:22",
+      "dest": "22",
+      "type_text": "羽犬塚 &nbsp;",
+      "href": "/jr-k_time/2610/0024/00247603.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 20,
+      "minute": 35,
+      "dep_time": "20:35",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00267901.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 20,
+      "minute": 43,
+      "dep_time": "20:43",
+      "dest": "43",
+      "type_text": "荒木 鳥栖から各駅停車",
+      "href": "/jr-k_time/2610/0024/00247702.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 20,
+      "minute": 47,
+      "dep_time": "20:47",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00268001.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 21,
+      "minute": 5,
+      "dep_time": "21:05",
+      "dest": "早岐",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0028/00288501.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 21,
+      "minute": 14,
+      "dep_time": "21:14",
+      "dest": "14",
+      "type_text": "荒木",
+      "href": "/jr-k_time/2610/0024/00247802.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 21,
+      "minute": 28,
+      "dep_time": "21:28",
+      "dest": "二日市",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0026/00268501.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 21,
+      "minute": 44,
+      "dep_time": "21:44",
+      "dest": "羽犬塚",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0025/00251002.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 21,
+      "minute": 49,
+      "dep_time": "21:49",
+      "dest": "49",
+      "type_text": "鳥栖",
+      "href": "/jr-k_time/2610/0021/00213102.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 22,
+      "minute": 0,
+      "dep_time": "22:00",
+      "dest": "江北",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0028/00288701.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 22,
+      "minute": 20,
+      "dep_time": "22:20",
+      "dest": "久留米",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0025/00251101.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 22,
+      "minute": 45,
+      "dep_time": "22:45",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00268801.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 22,
+      "minute": 54,
+      "dep_time": "22:54",
+      "dest": "54",
+      "type_text": "荒尾 二日市から各駅停車",
+      "href": "/jr-k_time/2610/0024/00240902.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 23,
+      "minute": 16,
+      "dep_time": "23:16",
+      "dest": "久留米",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0025/00251201.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 23,
+      "minute": 46,
+      "dep_time": "23:46",
+      "dest": "久留米",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0025/00251301.html?c=28283&ym=202609&d=25"
+    },
+    {
+      "day_type": "weekday",
+      "hour": 0,
+      "minute": 16,
+      "dep_time": "00:16",
+      "dest": "南福岡",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0026/00269201.html?c=28283&ym=202609&d=25"
+    }
+  ],
+  "holiday": [
+    {
+      "day_type": "holiday",
+      "hour": 5,
+      "minute": 13,
+      "dep_time": "05:13",
+      "dest": "大牟田",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0001/00011001.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 5,
+      "minute": 52,
+      "dep_time": "05:52",
+      "dest": "鳥栖",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0024/00248601.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 6,
+      "minute": 20,
+      "dep_time": "06:20",
+      "dest": "荒尾",
+      "type_text": "南福岡～大牟田間快速",
+      "href": "/jr-k_time/2610/0015/00158901.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 6,
+      "minute": 35,
+      "dep_time": "06:35",
+      "dest": "江北",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0022/00220301.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 6,
+      "minute": 56,
+      "dep_time": "06:56",
+      "dest": "大牟田",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0024/00248801.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 7,
+      "minute": 5,
+      "dep_time": "07:05",
+      "dest": "荒尾",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0024/00241301.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 7,
+      "minute": 20,
+      "dep_time": "07:20",
+      "dest": "二日市",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0024/00248901.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 7,
+      "minute": 25,
+      "dep_time": "07:25",
+      "dest": "南福岡",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0024/00249001.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 7,
+      "minute": 33,
+      "dep_time": "07:33",
+      "dest": "鳥栖",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0024/00249101.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 7,
+      "minute": 41,
+      "dep_time": "07:41",
+      "dest": "二日市",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0019/00198301.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 7,
+      "minute": 46,
+      "dep_time": "07:46",
+      "dest": "46",
+      "type_text": "南福岡",
+      "href": "/jr-k_time/2610/0024/00246001.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 7,
+      "minute": 52,
+      "dep_time": "07:52",
+      "dest": "52",
+      "type_text": "羽犬塚",
+      "href": "/jr-k_time/2610/0021/00212301.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 7,
+      "minute": 59,
+      "dep_time": "07:59",
+      "dest": "久留米",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0024/00249201.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 8,
+      "minute": 3,
+      "dep_time": "08:03",
+      "dest": "南福岡",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0015/00157201.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 8,
+      "minute": 9,
+      "dep_time": "08:09",
+      "dest": "二日市",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0019/00198601.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 8,
+      "minute": 19,
+      "dep_time": "08:19",
+      "dest": "19",
+      "type_text": "南福岡",
+      "href": "/jr-k_time/2610/0024/00246101.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 8,
+      "minute": 24,
+      "dep_time": "08:24",
+      "dest": "久留米",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0024/00249301.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 8,
+      "minute": 34,
+      "dep_time": "08:34",
+      "dest": "南福岡",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0019/00198801.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 8,
+      "minute": 42,
+      "dep_time": "08:42",
+      "dest": "42",
+      "type_text": "鳥栖",
+      "href": "/jr-k_time/2610/0024/00246201.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 8,
+      "minute": 49,
+      "dep_time": "08:49",
+      "dest": "二日市",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0019/00199001.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 8,
+      "minute": 57,
+      "dep_time": "08:57",
+      "dest": "鳥栖",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0017/00172201.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 9,
+      "minute": 3,
+      "dep_time": "09:03",
+      "dest": "03",
+      "type_text": "南福岡 &nbsp;",
+      "href": "/jr-k_time/2610/0024/00246301.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 9,
+      "minute": 13,
+      "dep_time": "09:13",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0019/00199101.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 9,
+      "minute": 24,
+      "dep_time": "09:24",
+      "dest": "24",
+      "type_text": "鳥栖 二日市から各駅停車",
+      "href": "/jr-k_time/2610/0024/00246401.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 9,
+      "minute": 28,
+      "dep_time": "09:28",
+      "dest": "南福岡",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0019/00199301.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 9,
+      "minute": 36,
+      "dep_time": "09:36",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0024/00249401.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 9,
+      "minute": 54,
+      "dep_time": "09:54",
+      "dest": "久留米",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0024/00249501.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 10,
+      "minute": 8,
+      "dep_time": "10:08",
+      "dest": "二日市",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0026/00262801.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 10,
+      "minute": 18,
+      "dep_time": "10:18",
+      "dest": "南福岡",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0026/00265401.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 10,
+      "minute": 26,
+      "dep_time": "10:26",
+      "dest": "26",
+      "type_text": "羽犬塚",
+      "href": "/jr-k_time/2610/0024/00246501.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 10,
+      "minute": 36,
+      "dep_time": "10:36",
+      "dest": "荒木",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0024/00249601.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 10,
+      "minute": 56,
+      "dep_time": "10:56",
+      "dest": "56",
+      "type_text": "羽犬塚",
+      "href": "/jr-k_time/2610/0024/00246601.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 11,
+      "minute": 6,
+      "dep_time": "11:06",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00265501.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 11,
+      "minute": 26,
+      "dep_time": "11:26",
+      "dest": "26",
+      "type_text": "鳥栖 二日市から各駅停車",
+      "href": "/jr-k_time/2610/0021/00212502.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 11,
+      "minute": 33,
+      "dep_time": "11:33",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00265601.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 11,
+      "minute": 47,
+      "dep_time": "11:47",
+      "dest": "久留米",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0024/00249701.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 12,
+      "minute": 2,
+      "dep_time": "12:02",
+      "dest": "02",
+      "type_text": "羽犬塚 &nbsp;",
+      "href": "/jr-k_time/2610/0024/00246701.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 12,
+      "minute": 9,
+      "dep_time": "12:09",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00265701.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 12,
+      "minute": 26,
+      "dep_time": "12:26",
+      "dest": "26",
+      "type_text": "鳥栖 二日市から各駅停車",
+      "href": "/jr-k_time/2610/0024/00246802.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 12,
+      "minute": 43,
+      "dep_time": "12:43",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00265801.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 12,
+      "minute": 59,
+      "dep_time": "12:59",
+      "dest": "59",
+      "type_text": "羽犬塚 &nbsp;",
+      "href": "/jr-k_time/2610/0024/00246901.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 13,
+      "minute": 1,
+      "dep_time": "13:01",
+      "dest": "久留米",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0024/00249801.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 13,
+      "minute": 13,
+      "dep_time": "13:13",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00265901.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 13,
+      "minute": 26,
+      "dep_time": "13:26",
+      "dest": "26",
+      "type_text": "鳥栖 二日市から各駅停車",
+      "href": "/jr-k_time/2610/0026/00263002.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 13,
+      "minute": 43,
+      "dep_time": "13:43",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00266001.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 13,
+      "minute": 59,
+      "dep_time": "13:59",
+      "dest": "59",
+      "type_text": "羽犬塚 &nbsp;",
+      "href": "/jr-k_time/2610/0021/00212901.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 14,
+      "minute": 1,
+      "dep_time": "14:01",
+      "dest": "久留米",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0024/00249901.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 14,
+      "minute": 13,
+      "dep_time": "14:13",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00266101.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 14,
+      "minute": 26,
+      "dep_time": "14:26",
+      "dest": "26",
+      "type_text": "鳥栖 二日市から各駅停車",
+      "href": "/jr-k_time/2610/0026/00263102.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 14,
+      "minute": 41,
+      "dep_time": "14:41",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00266201.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 14,
+      "minute": 59,
+      "dep_time": "14:59",
+      "dest": "59",
+      "type_text": "羽犬塚 &nbsp;",
+      "href": "/jr-k_time/2610/0024/00247001.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 15,
+      "minute": 1,
+      "dep_time": "15:01",
+      "dest": "久留米",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0025/00250001.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 15,
+      "minute": 13,
+      "dep_time": "15:13",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00266301.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 15,
+      "minute": 26,
+      "dep_time": "15:26",
+      "dest": "26",
+      "type_text": "鳥栖 二日市から各駅停車",
+      "href": "/jr-k_time/2610/0026/00263202.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 15,
+      "minute": 37,
+      "dep_time": "15:37",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0015/00157401.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 15,
+      "minute": 49,
+      "dep_time": "15:49",
+      "dest": "49",
+      "type_text": "羽犬塚 &nbsp;",
+      "href": "/jr-k_time/2610/0021/00212601.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 15,
+      "minute": 58,
+      "dep_time": "15:58",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00266501.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 16,
+      "minute": 2,
+      "dep_time": "16:02",
+      "dest": "02",
+      "type_text": "二日市 &nbsp;",
+      "href": "/jr-k_time/2610/0026/00263301.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 16,
+      "minute": 10,
+      "dep_time": "16:10",
+      "dest": "久留米",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0025/00250101.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 16,
+      "minute": 25,
+      "dep_time": "16:25",
+      "dest": "25",
+      "type_text": "久留米 二日市から各駅停車",
+      "href": "/jr-k_time/2610/0026/00263402.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 16,
+      "minute": 38,
+      "dep_time": "16:38",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00266701.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 16,
+      "minute": 45,
+      "dep_time": "16:45",
+      "dest": "45",
+      "type_text": "鳥栖 &nbsp;",
+      "href": "/jr-k_time/2610/0021/00212701.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 16,
+      "minute": 55,
+      "dep_time": "16:55",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0025/00250301.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 17,
+      "minute": 4,
+      "dep_time": "17:04",
+      "dest": "04",
+      "type_text": "羽犬塚",
+      "href": "/jr-k_time/2610/0024/00247101.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 17,
+      "minute": 12,
+      "dep_time": "17:12",
+      "dest": "荒木",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0025/00250201.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 17,
+      "minute": 20,
+      "dep_time": "17:20",
+      "dest": "20",
+      "type_text": "羽犬塚",
+      "href": "/jr-k_time/2610/0021/00212802.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 17,
+      "minute": 26,
+      "dep_time": "17:26",
+      "dest": "鳥栖",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0026/00267201.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 17,
+      "minute": 36,
+      "dep_time": "17:36",
+      "dest": "南福岡",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0026/00267301.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 17,
+      "minute": 39,
+      "dep_time": "17:39",
+      "dest": "二日市",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0026/00267401.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 17,
+      "minute": 45,
+      "dep_time": "17:45",
+      "dest": "大牟田",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0025/00250401.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 17,
+      "minute": 54,
+      "dep_time": "17:54",
+      "dest": "早岐",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0028/00288201.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 18,
+      "minute": 4,
+      "dep_time": "18:04",
+      "dest": "04",
+      "type_text": "久留米 鳥栖から各駅停車",
+      "href": "/jr-k_time/2610/0024/00247202.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 18,
+      "minute": 14,
+      "dep_time": "18:14",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0025/00250601.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 18,
+      "minute": 23,
+      "dep_time": "18:23",
+      "dest": "23",
+      "type_text": "大牟田 &nbsp;",
+      "href": "/jr-k_time/2610/0021/00213002.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 18,
+      "minute": 33,
+      "dep_time": "18:33",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0025/00250801.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 18,
+      "minute": 42,
+      "dep_time": "18:42",
+      "dest": "42",
+      "type_text": "羽犬塚 南福岡まで各駅停車",
+      "href": "/jr-k_time/2610/0024/00247302.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 18,
+      "minute": 54,
+      "dep_time": "18:54",
+      "dest": "荒木",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0025/00250701.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 19,
+      "minute": 7,
+      "dep_time": "19:07",
+      "dest": "07",
+      "type_text": "久留米 鳥栖から各駅停車",
+      "href": "/jr-k_time/2610/0024/00247402.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 19,
+      "minute": 15,
+      "dep_time": "19:15",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0020/00200702.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 19,
+      "minute": 26,
+      "dep_time": "19:26",
+      "dest": "26",
+      "type_text": "荒尾 &nbsp;",
+      "href": "/jr-k_time/2610/0024/00240702.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 19,
+      "minute": 29,
+      "dep_time": "19:29",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0020/00200901.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 19,
+      "minute": 42,
+      "dep_time": "19:42",
+      "dest": "42",
+      "type_text": "久留米 鳥栖から各駅停車",
+      "href": "/jr-k_time/2610/0024/00247502.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 19,
+      "minute": 54,
+      "dep_time": "19:54",
+      "dest": "久留米",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0025/00250901.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 20,
+      "minute": 6,
+      "dep_time": "20:06",
+      "dest": "06",
+      "type_text": "荒尾 鳥栖から各駅停車",
+      "href": "/jr-k_time/2610/0024/00240803.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 20,
+      "minute": 12,
+      "dep_time": "20:12",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00267801.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 20,
+      "minute": 22,
+      "dep_time": "20:22",
+      "dest": "22",
+      "type_text": "羽犬塚 &nbsp;",
+      "href": "/jr-k_time/2610/0024/00247602.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 20,
+      "minute": 35,
+      "dep_time": "20:35",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00267901.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 20,
+      "minute": 43,
+      "dep_time": "20:43",
+      "dest": "43",
+      "type_text": "荒木 鳥栖から各駅停車",
+      "href": "/jr-k_time/2610/0024/00247702.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 20,
+      "minute": 47,
+      "dep_time": "20:47",
+      "dest": "鳥栖",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00268001.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 21,
+      "minute": 5,
+      "dep_time": "21:05",
+      "dest": "早岐",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0028/00288501.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 21,
+      "minute": 14,
+      "dep_time": "21:14",
+      "dest": "14",
+      "type_text": "荒木",
+      "href": "/jr-k_time/2610/0024/00247802.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 21,
+      "minute": 28,
+      "dep_time": "21:28",
+      "dest": "二日市",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0026/00268501.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 21,
+      "minute": 44,
+      "dep_time": "21:44",
+      "dest": "羽犬塚",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0025/00251002.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 21,
+      "minute": 49,
+      "dep_time": "21:49",
+      "dest": "49",
+      "type_text": "鳥栖",
+      "href": "/jr-k_time/2610/0021/00213102.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 22,
+      "minute": 0,
+      "dep_time": "22:00",
+      "dest": "江北",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0028/00288701.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 22,
+      "minute": 20,
+      "dep_time": "22:20",
+      "dest": "久留米",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0025/00251101.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 22,
+      "minute": 45,
+      "dep_time": "22:45",
+      "dest": "二日市",
+      "type_text": "&nbsp;",
+      "href": "/jr-k_time/2610/0026/00268801.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 22,
+      "minute": 54,
+      "dep_time": "22:54",
+      "dest": "54",
+      "type_text": "荒尾 二日市から各駅停車",
+      "href": "/jr-k_time/2610/0024/00240902.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 23,
+      "minute": 16,
+      "dep_time": "23:16",
+      "dest": "久留米",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0025/00251201.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 23,
+      "minute": 46,
+      "dep_time": "23:46",
+      "dest": "久留米",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0025/00251301.html?c=28283&ym=202609&d=27"
+    },
+    {
+      "day_type": "holiday",
+      "hour": 0,
+      "minute": 16,
+      "dep_time": "00:16",
+      "dest": "南福岡",
+      "type_text": "普通",
+      "href": "/jr-k_time/2610/0026/00269201.html?c=28283&ym=202609&d=27"
+    }
+  ]
+}

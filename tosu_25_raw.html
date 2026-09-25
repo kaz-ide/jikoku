@@ -1,0 +1,4418 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja-JP">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>JR九州／駅別時刻表</title>
+<script type="text/javascript">
+<!--
+//if (document.referrer.indexOf('.jrkyushu-timetable.jp/') < 0){
+  //if (window.matchMedia("(max-width:767px)").matches){
+  if (window.matchMedia("(max-width:767px)").matches || clientType() != 'pc'){
+    location.href = "/cgi-bin/sp/sp-tt_list.cgi/28399";
+  }
+//}
+function clientType() {
+	var ua = navigator.userAgent;
+	if (ua.indexOf('Android') >= 0) {
+		if (ua.indexOf('Mobile') >= 0)
+			return 'sp';
+		return 'tb';
+	}
+	else if (ua.indexOf('iPad') >= 0) {
+			return 'tb';
+	}
+	//else if (ua.match(/(iPhone|iPod|Windows Phone)/)) {
+	else if (ua.match(/(iPhone|iPod)/)) {
+		return 'sp';
+	}
+	return 'pc';
+}
+//-->
+</script>
+<link type="text/css" href="/jr-k_time/css/timetable.css" rel="stylesheet" />
+<script type="text/javascript" src="/common_re/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../jr-k_time/announce.js"></script>
+<script type="text/javascript" src="/common_re/js/analytics.js" charset="utf-8"></script>
+<script type="text/javascript">
+<!--
+function go_printpage(pg) {
+  var url = "p-tt_dep.cgi?c=28399&d=20260925&p=" + pg;
+  var _printpage;
+  _printpage = window.open(url,"_blank","location=1,menubar=1,status=1,toolbar=1,scrollbars=1,resizable=1");
+  _printpage.focus();
+}
+var listMonth = {
+  "202609" : { "val" : "202609", "day_s" : 25, "day_e" : 30 },
+  "202610" : { "val" : "202610", "day_s" : 1, "day_e" : 31 },
+  "202611" : { "val" : "202611", "day_s" : 1, "day_e" : 30 },
+  "202612" : { "val" : "202612", "day_s" : 1, "day_e" : 31 }
+};
+function set_select_date() {
+  var lastSel = $("#sel_date").val();
+  $("#sel_date option").remove();
+  var dataMonth = listMonth[$("#sel_year_month").val()];
+  for (var d = dataMonth.day_s ; d <= dataMonth.day_e ; d++) {
+    var day = ("0" + d).slice(-2);
+    var opt = $("<option>").val(day).text(day+'日');
+    $("#sel_date").append(opt);
+  }
+  $("#sel_date").val(lastSel);
+}
+$(document).ready(function(){
+  set_select_date();
+  $('#sel_year_month').change(function(){
+    set_select_date();
+  });
+});
+//-->
+</script>
+</head>
+<body>
+<!-- フロート広告挿入タグ -->
+<script type="text/javascript"><!--
+myBannerWidth = 120; // 画像の幅(ピクセル)
+myBannerHeight = 240; // 画像の高さ(ピクセル)
+function myMain(){
+myObj = document.getElementById ( "banner_area" ).style;
+myObj.left = document.body.scrollLeft + document.body.clientWidth - myBannerWidth - 10;
+myObj.top  = document.body.scrollTop  + document.body.clientHeight - myBannerHeight - 50;
+}
+// --></script>
+<div id="banner_area" style="position:absolute; font-size:80%;">
+  <a href="#" id="banner_view" onClick="image_view();return false;" style="display:none;">広告を再表示</a>
+  <a href="#" id="banner_hidden" onClick="image_hidden();return false;">広告を消す</a>
+<div id="banner_img">
+<script type="text/javascript">
+(function(){
+	src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.jrq-jikokuad.com/data.php?id=5ffd72e2d7ef1';
+	document.write ('<scr' + 'ipt type="text/javascript" src="' + src + '"></scr' + 'ipt>');
+})();
+</script>
+</div>
+<script type="text/javascript">
+<!--
+setInterval( "myMain()", 1 );
+// -->
+</script>
+</div>
+<script language="JavaScript" type="text/javascript">
+<!--
+var elem1 = document.getElementById("banner_img");
+var elem2 = document.getElementById("banner_view");
+var elem3 = document.getElementById("banner_hidden");
+function image_view() {
+  elem1.style.display = "";
+  elem2.style.display = "none";
+  elem3.style.display = "";
+}
+function image_hidden() {
+  elem1.style.display = "none";
+  elem2.style.display = "";
+  elem3.style.display = "none";
+}
+-->
+</script>
+<!-- フロート広告挿入タグ -->
+<basefont size="1">
+<form method="post" action="tt_dep.cgi">
+<div align="center">
+<table border="0">
+<tr>
+<td align="center">
+<table border="0">
+<tr>
+<td align="center">
+ <img src="../../jr-k_time/img/title_ekibetus3.gif" alt="駅別時刻表" title="駅別時刻表">
+</td>
+</tr>
+<tr>
+<td>
+<table border="0">
+<tr>
+<td valign="top" align="center">
+<table border="0">
+<tr valign="top">
+<td><b>黒字：普通列車</b></td>
+<td width="10"></td>
+<td><font color="blue"><b>青字：快速列車・区間快速列車</b></font></td>
+</tr>
+<tr valign="top">
+<td><font color="red"><b>赤字：特急列車</b></font></td>
+<td width="10"></td>
+<td><b><i>斜字：増発列車、臨時停車</i></b></div></td>
+</tr>
+</table>
+</td>
+<td valign="top">
+<table border="0">
+<tr>
+<td><b><font size="-1">上段：列車種別　列車名／号数</font></b></td>
+</tr>
+<tr>
+<td><b><font size="-1">中段：時刻</font></b></td>
+</tr>
+<tr>
+<td>
+<font size="-1"><b>下段：行先</b><br></font>
+<!--
+        (快速区間又は普通区間を表示)<br><br></font>
+<div align="right">
+<table border="0" CELLSPACING="0" CELLPADDING="0">
+<tr>
+<td align="center" colspan="3">
+<font size="-1"><b>区間の快速表示例</b></font>
+</td>
+</tr>
+<tr>
+<td align="center">
+<font color="blue" size="-1">小倉から普通<br>小倉から快速<br></font>
+</td>
+</tr>
+</table>
+</div>
+-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<table border="0" cellpadding="2" cellspacing="0" bgcolor="#ccffcc" style="border-style:solid;border-width:1px;border-color:red;">
+<tr valign="top"><td><font size="2">&nbsp;※</font></td><td><font size="2">時刻をクリックすることにより列車の詳細時刻をご覧いただけます。</font></td></tr>
+<tr valign="top"><td><font size="2">&nbsp;※</font></td><td><font size="2">「印刷」ボタンを押すとご自宅のパソコンできれいにプリントアウトができます。</font><br><font size="1">(インターネットオプションから「背景の色とイメージを印刷する」の設定をすると見やすく印刷ができます。)</font></td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br>
+<!--お知らせ-->
+<script type="text/javascript">
+<!--
+announce('鳥栖駅','20260925');
+//-->
+</script>
+<!--/お知らせ-->
+<HR size="1" width="90%">
+<span id="id_station" style="font-size:150%;font-weight:bold;">鳥栖駅</span><br>
+<b>2026年09月25日 (金) の時刻表</b><br>
+<br>
+<table border="0">
+<tr>
+<td nowrap align="center">
+<table border="0">
+<tr>
+<td>
+<select name="year_month" id="sel_year_month">
+<option value="202609" selected>
+2026年09月
+<option value="202610">2026年10月
+<option value="202611">2026年11月
+<option value="202612">2026年12月
+</select>
+</td>
+<td>
+<select name="date" id="sel_date">
+<option value="01">01日
+<option value="02">02日
+<option value="03">03日
+<option value="04">04日
+<option value="05">05日
+<option value="06">06日
+<option value="07">07日
+<option value="08">08日
+<option value="09">09日
+<option value="10">10日
+<option value="11">11日
+<option value="12">12日
+<option value="13">13日
+<option value="14">14日
+<option value="15">15日
+<option value="16">16日
+<option value="17">17日
+<option value="18">18日
+<option value="19">19日
+<option value="20">20日
+<option value="21">21日
+<option value="22">22日
+<option value="23">23日
+<option value="24">24日
+<option value="25" selected>25日
+<option value="26">26日
+<option value="27">27日
+<option value="28">28日
+<option value="29">29日
+<option value="30">30日
+<option value="31">31日
+</select>
+</td>
+<td>の</td>
+<td>
+<input type="submit" name="disp_tt" value="時刻表を表示する">
+</td>
+</tr>
+<tr>
+<td colspan="4" align="center">
+<input type="submit" name="set" value="ご利用路線選択">
+</td>
+</tr>
+</table>
+<table border="0" cellpadding="2" cellspacing="0" style="font-size:small;border-style:solid;border-width:1px;border-color:red;">
+<tr><td width="460">時刻表は午前4時で日付が切り替わるようになっています。<br>土休日など、日付により時刻が変更となったり、運休・運転する列車がある場合がございますのでご注意下さい。<br></td></tr>
+</table>
+<br>
+<!--お知らせ2-->
+<script type="text/javascript">
+<!--
+announce2('鳥栖駅','20260925');
+//-->
+</script>
+<!--/お知らせ2-->
+</td>
+</tr>
+<tr>
+<td nowrap valign="top" align="center">
+<table class="timetable">
+<tr><td align="right"><button type="button" name="print_page" onclick="go_printpage(0);" style="font-size:110%;font-weight:bold;">印刷</button></td></tr>
+<tr><td>
+<TABLE border="1" bordercolor="#696969" cellpadding="2" cellspacing="0">
+<tr>
+<th align=center colspan="3" nowrap bgcolor="#add8e6">
+<div align="center" style="font-size:15px">鹿児島本線 博多・小倉・門司方面（上り）</div>
+</th>
+</tr>
+<!-- 時刻表 -->
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">4</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" height="28" nowrap></td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0008/00080201.html?c=28399&ym=202609&d=25" target="_blank"><b>59</b></a>
+</font>
+<br>
+小倉
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">5</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" height="28" nowrap></td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00251401.html?c=28399&ym=202609&d=25" target="_blank"><b>31</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">6</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+かささぎ
+202<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00194301.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>42</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00251701.html?c=28399&ym=202609&d=25" target="_blank"><b>03</b></a>
+</font>
+<br>
+博多<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00242201.html?c=28399&ym=202609&d=25" target="_blank"><b>14</b></a>
+</font>
+<br>
+門司港<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00251901.html?c=28399&ym=202609&d=25" target="_blank"><b>26</b></a>
+</font>
+<br>
+博多<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0021/00213401.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>33</b></a>
+</font>
+<br>
+博多
+<font class="fonts"><br><span class="sect_local">南福岡から各駅停車</span></font>
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00252001.html?c=28399&ym=202609&d=25" target="_blank"><b>36</b></a>
+</font>
+<br>
+門司港<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00252101.html?c=28399&ym=202609&d=25" target="_blank"><b>47</b></a>
+</font>
+<br>
+小倉<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0022/00221501.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>56</b></a>
+</font>
+<br>
+博多
+<font class="fonts"><br><span class="sect_local">南福岡から各駅停車</span></font>
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00252201.html?c=28399&ym=202609&d=25" target="_blank"><b>59</b></a>
+</font>
+<br>
+福間<br>&nbsp;
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">7</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+かささぎ
+102<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00194901.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>21</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり（リレーかもめ）
+2<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00191001.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>36</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+かささぎ
+104<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00194001.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>56</b></a>
+</font>
+<br>
+吉塚
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00252301.html?c=28399&ym=202609&d=25" target="_blank"><b>08</b></a>
+</font>
+<br>
+吉塚<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0020/00202801.html?c=28399&ym=202609&d=25" target="_blank"><b>18</b></a>
+</font>
+<br>
+門司港<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0011/00119301.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>28</b></a>
+</font>
+<br>
+門司港
+<font class="fonts"><br><span class="sect_local">南福岡～博多間各駅停車</span></font>
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0020/00202901.html?c=28399&ym=202609&d=25" target="_blank"><b>38</b></a>
+</font>
+<br>
+吉塚<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0015/00159001.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>46</b></a>
+</font>
+<br>
+門司港
+<font class="fonts"><br><span class="sect_local">南福岡～博多間各駅停車</span></font>
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">8</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+4<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00191101.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>13</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+6<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0002/00021501.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>39</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0022/00221901.html?c=28399&ym=202609&d=25" target="_blank"><b>01</b></a>
+</font>
+<br>
+吉塚<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0021/00213501.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>15</b></a>
+</font>
+<br>
+門司港
+<font class="fonts"><br><span class="sect_local">南福岡～博多間各駅停車</span></font>
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00252801.html?c=28399&ym=202609&d=25" target="_blank"><b>25</b></a>
+</font>
+<br>
+博多<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00242301.html?c=28399&ym=202609&d=25" target="_blank"><b>45</b></a>
+</font>
+<br>
+博多<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0021/00213601.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>50</b></a>
+</font>
+<br>
+門司港
+<font class="fonts"><br><span class="sect_local">南福岡～博多間各駅停車</span></font>
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">9</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+8<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00191201.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>03</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+10<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0008/00086101.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>31</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+12<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00191301.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>48</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0021/00213701.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>14</b></a>
+</font>
+<br>
+小倉<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00248101.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>18</b></a>
+</font>
+<br>
+門司港
+<font class="fonts"><br><span class="sect_rapid">二日市～福間間快速</span></font>
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00253101.html?c=28399&ym=202609&d=25" target="_blank"><b>26</b></a>
+</font>
+<br>
+折尾<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00253301.html?c=28399&ym=202609&d=25" target="_blank"><b>44</b></a>
+</font>
+<br>
+福間<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00263501.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>56</b></a>
+</font>
+<br>
+門司港
+<font class="fonts"><br><span class="sect_local">折尾から各駅停車</span></font>
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">10</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+かささぎ
+106<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00194401.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>04</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+14<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00191401.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>22</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+16<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00245001.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>29</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+18<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0023/00237201.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>51</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+ゆふ
+2<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0016/00167401.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>56</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00253401.html?c=28399&ym=202609&d=25" target="_blank"><b>13</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00253601.html?c=28399&ym=202609&d=25" target="_blank"><b>33</b></a>
+</font>
+<br>
+折尾
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00242701.html?c=28399&ym=202609&d=25" target="_blank"><b>42</b></a>
+</font>
+<br>
+福間
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">11</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+102<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00287501.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>17</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+20<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00245101.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>32</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+22<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0023/00237301.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>54</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00263601.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>03</b></a>
+</font>
+<br>
+門司港
+<font class="fonts"><br><span class="sect_local">折尾から各駅停車</span></font>
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00253701.html?c=28399&ym=202609&d=25" target="_blank"><b>13</b></a>
+</font>
+<br>
+福間<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00263701.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>34</b></a>
+</font>
+<br>
+博多
+<font class="fonts"><br><span class="sect_local">二日市まで各駅停車</span></font>
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00263901.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>59</b></a>
+</font>
+<br>
+小倉
+<font class="fonts"><br><span class="sect_local">折尾から各駅停車</span></font>
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">12</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+24<br>
+ハウステンボス
+24
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00245201.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>11</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+26<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0023/00237401.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>53</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00254101.html?c=28399&ym=202609&d=25" target="_blank"><b>18</b></a>
+</font>
+<br>
+福間<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00264001.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>33</b></a>
+</font>
+<br>
+門司港
+<font class="fonts"><br><span class="sect_rapid">二日市～福間間快速</span></font>
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00264101.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>59</b></a>
+</font>
+<br>
+門司港
+<font class="fonts"><br><span class="sect_local">折尾から各駅停車</span></font>
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">13</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+28<br>
+ハウステンボス
+28
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00245301.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>06</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+30<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0023/00237501.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>52</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+ゆふいんの森
+2<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0016/00166801.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>55</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00254401.html?c=28399&ym=202609&d=25" target="_blank"><b>15</b></a>
+</font>
+<br>
+福間<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00264201.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>33</b></a>
+</font>
+<br>
+門司港
+<font class="fonts"><br><span class="sect_rapid">二日市～福間間快速</span></font>
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00264301.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>59</b></a>
+</font>
+<br>
+門司港
+<font class="fonts"><br><span class="sect_local">折尾から各駅停車</span></font>
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">14</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+32<br>
+ハウステンボス
+32
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00245401.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>06</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+34<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0023/00237601.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>53</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00254701.html?c=28399&ym=202609&d=25" target="_blank"><b>15</b></a>
+</font>
+<br>
+福間<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00264401.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>33</b></a>
+</font>
+<br>
+門司港
+<font class="fonts"><br><span class="sect_rapid">二日市～福間間快速</span></font>
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00264501.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>57</b></a>
+</font>
+<br>
+門司港
+<font class="fonts"><br><span class="sect_local">折尾から各駅停車</span></font>
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">15</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+36<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00245501.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>05</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+かささぎ
+108<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00194801.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>31</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+38<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0023/00237701.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>53</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00255001.html?c=28399&ym=202609&d=25" target="_blank"><b>16</b></a>
+</font>
+<br>
+福間<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00264601.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>33</b></a>
+</font>
+<br>
+門司港
+<font class="fonts"><br><span class="sect_rapid">二日市～福間間快速</span></font>
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00264701.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>59</b></a>
+</font>
+<br>
+小倉
+<font class="fonts"><br><span class="sect_local">福間から各駅停車</span></font>
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">16</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+ゆふ
+4<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0016/00167501.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>07</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+40<br>
+ハウステンボス
+40
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00245601.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>11</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+42<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0023/00237801.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>51</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00255301.html?c=28399&ym=202609&d=25" target="_blank"><b>13</b></a>
+</font>
+<br>
+福間<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0021/00213801.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>25</b></a>
+</font>
+<br>
+小倉<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00264802.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>30</b></a>
+</font>
+<br>
+門司港
+<font class="fonts"><br><span class="sect_rapid">二日市～福間間快速</span></font>
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00264902.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>54</b></a>
+</font>
+<br>
+門司港
+<font class="fonts"><br><span class="sect_rapid">二日市～福間間快速</span></font>
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">17</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+44<br>
+ハウステンボス
+44
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00245701.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>25</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+ゆふいんの森
+4<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0016/00166901.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>44</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+46<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00191501.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>53</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00255601.html?c=28399&ym=202609&d=25" target="_blank"><b>08</b></a>
+</font>
+<br>
+門司港<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00248303.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>16</b></a>
+</font>
+<br>
+小倉<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00255801.html?c=28399&ym=202609&d=25" target="_blank"><b>29</b></a>
+</font>
+<br>
+海老津<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00265002.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>47</b></a>
+</font>
+<br>
+門司港
+<font class="fonts"><br><span class="sect_rapid">二日市～福間間快速</span></font>
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">18</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+104<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00287601.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>13</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり（リレーかもめ）
+48<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00191601.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>27</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+50<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00191701.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>55</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0029/00290101.html?c=28399&ym=202609&d=25" target="_blank"><b>02</b></a>
+</font>
+<br>
+福間<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00242103.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>15</b></a>
+</font>
+<br>
+門司港<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00256001.html?c=28399&ym=202609&d=25" target="_blank"><b>33</b></a>
+</font>
+<br>
+海老津<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0029/00290201.html?c=28399&ym=202609&d=25" target="_blank"><b>46</b></a>
+</font>
+<br>
+福間<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00265102.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>51</b></a>
+</font>
+<br>
+小倉
+<font class="fonts"><br><span class="sect_local">福間から各駅停車</span></font>
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">19</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+ゆふいんの森
+6<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0016/00167001.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>02</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+かささぎ
+110<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00287701.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>13</b></a>
+</font>
+<br>
+門司港
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり（リレーかもめ）
+52<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00191801.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>32</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+54<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00191901.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>55</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00256101.html?c=28399&ym=202609&d=25" target="_blank"><b>05</b></a>
+</font>
+<br>
+門司港<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0021/00213903.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>17</b></a>
+</font>
+<br>
+門司港<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00256301.html?c=28399&ym=202609&d=25" target="_blank"><b>24</b></a>
+</font>
+<br>
+福間<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00256401.html?c=28399&ym=202609&d=25" target="_blank"><b>43</b></a>
+</font>
+<br>
+小倉<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00265202.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>58</b></a>
+</font>
+<br>
+小倉
+<font class="fonts"><br><span class="sect_local">福間から各駅停車</span></font>
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">20</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり（リレーかもめ）
+56<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00192001.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>34</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+58<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00192101.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>56</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00256501.html?c=28399&ym=202609&d=25" target="_blank"><b>02</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00248402.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>20</b></a>
+</font>
+<br>
+小倉
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00256601.html?c=28399&ym=202609&d=25" target="_blank"><b>25</b></a>
+</font>
+<br>
+門司港
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00256701.html?c=28399&ym=202609&d=25" target="_blank"><b>44</b></a>
+</font>
+<br>
+小倉
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">21</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+ゆふ
+6<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0016/00167601.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>11</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり（リレーかもめ）
+60<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0023/00237901.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>35</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0020/00205101.html?c=28399&ym=202609&d=25" target="_blank"><b>04</b></a>
+</font>
+<br>
+門司港
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0021/00214002.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>27</b></a>
+</font>
+<br>
+門司港
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00256801.html?c=28399&ym=202609&d=25" target="_blank"><b>45</b></a>
+</font>
+<br>
+門司港
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">22</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+62<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00245801.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>08</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+64<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00192201.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>27</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00257101.html?c=28399&ym=202609&d=25" target="_blank"><b>21</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00257301.html?c=28399&ym=202609&d=25" target="_blank"><b>50</b></a>
+</font>
+<br>
+福間
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">23</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+66<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0023/00238001.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>20</b></a>
+</font>
+<br>
+門司港
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0029/00290801.html?c=28399&ym=202609&d=25" target="_blank"><b>38</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0029/00290801.html?c=28399&ym=202609&d=25" target="_blank"><b>38</b></a>
+</font>
+<br>
+博多
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><br></td>
+</tr>
+<tr>
+<td nowrap valign="top" align="center">
+<table class="timetable">
+<tr><td align="right"><button type="button" name="print_page" onclick="go_printpage(1);" style="font-size:110%;font-weight:bold;">印刷</button></td></tr>
+<tr><td>
+<TABLE border="1" bordercolor="#696969" cellpadding="2" cellspacing="0">
+<tr>
+<th align=center colspan="3" nowrap bgcolor="#add8e6">
+<div align="center" style="font-size:15px">鹿児島本線 久留米・大牟田方面（下り）</div>
+</th>
+</tr>
+<!-- 時刻表 -->
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">6</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" height="28" nowrap></td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0001/00011001.html?c=28399&ym=202609&d=25" target="_blank"><b>02</b></a>
+</font>
+<br>
+大牟田
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00248701.html?c=28399&ym=202609&d=25" target="_blank"><b>45</b></a>
+</font>
+<br>
+大牟田
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">7</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" height="28" nowrap></td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0015/00158901.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>02</b></a>
+</font>
+<br>
+荒尾
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00241201.html?c=28399&ym=202609&d=25" target="_blank"><b>24</b></a>
+</font>
+<br>
+宇土
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0013/00133101.html?c=28399&ym=202609&d=25" target="_blank"><b>32</b></a>
+</font>
+<br>
+日田
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00248801.html?c=28399&ym=202609&d=25" target="_blank"><b>38</b></a>
+</font>
+<br>
+大牟田
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00241301.html?c=28399&ym=202609&d=25" target="_blank"><b>59</b></a>
+</font>
+<br>
+荒尾
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">8</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+ゆふ
+1<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0016/00167101.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>15</b></a>
+</font>
+<br>
+別府
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0021/00212301.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>27</b></a>
+</font>
+<br>
+羽犬塚
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00198401.html?c=28399&ym=202609&d=25" target="_blank"><b>31</b></a>
+</font>
+<br>
+荒尾
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00249201.html?c=28399&ym=202609&d=25" target="_blank"><b>46</b></a>
+</font>
+<br>
+久留米
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">9</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+ゆふいんの森
+1<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0016/00166501.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>43</b></a>
+</font>
+<br>
+由布院
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00198501.html?c=28399&ym=202609&d=25" target="_blank"><b>05</b></a>
+</font>
+<br>
+荒尾<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00249301.html?c=28399&ym=202609&d=25" target="_blank"><b>21</b></a>
+</font>
+<br>
+久留米<br>&nbsp;
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+区快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00262701.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>31</b></a>
+</font>
+<br>
+熊本
+<font class="fonts"><br><span class="sect_local">大牟田から各駅停車</span></font>
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">10</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+ゆふいんの森
+3<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0016/00166601.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>37</b></a>
+</font>
+<br>
+別府
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00265301.html?c=28399&ym=202609&d=25" target="_blank"><b>06</b></a>
+</font>
+<br>
+大牟田
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0021/00212401.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>33</b></a>
+</font>
+<br>
+荒尾
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00249501.html?c=28399&ym=202609&d=25" target="_blank"><b>49</b></a>
+</font>
+<br>
+久留米
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">11</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" height="28" nowrap></td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00246501.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>03</b></a>
+</font>
+<br>
+羽犬塚
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00199601.html?c=28399&ym=202609&d=25" target="_blank"><b>10</b></a>
+</font>
+<br>
+荒尾
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00249601.html?c=28399&ym=202609&d=25" target="_blank"><b>27</b></a>
+</font>
+<br>
+荒木
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00246601.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>34</b></a>
+</font>
+<br>
+羽犬塚
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00199701.html?c=28399&ym=202609&d=25" target="_blank"><b>42</b></a>
+</font>
+<br>
+荒尾
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">12</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+ゆふ
+3<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0016/00167201.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>39</b></a>
+</font>
+<br>
+別府
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00199801.html?c=28399&ym=202609&d=25" target="_blank"><b>09</b></a>
+</font>
+<br>
+荒尾
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00199901.html?c=28399&ym=202609&d=25" target="_blank"><b>31</b></a>
+</font>
+<br>
+荒尾
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00246701.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>36</b></a>
+</font>
+<br>
+羽犬塚
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00249701.html?c=28399&ym=202609&d=25" target="_blank"><b>43</b></a>
+</font>
+<br>
+久留米
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">13</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" height="28" nowrap></td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0020/00200001.html?c=28399&ym=202609&d=25" target="_blank"><b>09</b></a>
+</font>
+<br>
+荒尾
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00246901.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>28</b></a>
+</font>
+<br>
+羽犬塚
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0020/00200101.html?c=28399&ym=202609&d=25" target="_blank"><b>36</b></a>
+</font>
+<br>
+荒尾
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00249801.html?c=28399&ym=202609&d=25" target="_blank"><b>47</b></a>
+</font>
+<br>
+久留米
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">14</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" height="28" nowrap></td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00287801.html?c=28399&ym=202609&d=25" target="_blank"><b>10</b></a>
+</font>
+<br>
+荒尾
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0021/00212901.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>32</b></a>
+</font>
+<br>
+羽犬塚
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0020/00200201.html?c=28399&ym=202609&d=25" target="_blank"><b>39</b></a>
+</font>
+<br>
+大牟田
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00249901.html?c=28399&ym=202609&d=25" target="_blank"><b>47</b></a>
+</font>
+<br>
+久留米
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">15</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+ゆふいんの森
+5<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0016/00166701.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>04</b></a>
+</font>
+<br>
+由布院
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<i>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0036/00364801.html?c=28399&ym=202609&d=25" target="_blank"><b>10</b></a>
+</font>
+<br>
+宇土
+</font>
+</i>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00247001.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>29</b></a>
+</font>
+<br>
+羽犬塚
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00287901.html?c=28399&ym=202609&d=25" target="_blank"><b>34</b></a>
+</font>
+<br>
+大牟田
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00250001.html?c=28399&ym=202609&d=25" target="_blank"><b>43</b></a>
+</font>
+<br>
+久留米
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">16</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" height="28" nowrap></td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00266801.html?c=28399&ym=202609&d=25" target="_blank"><b>02</b></a>
+</font>
+<br>
+大牟田
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0021/00212601.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>23</b></a>
+</font>
+<br>
+羽犬塚
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00288001.html?c=28399&ym=202609&d=25" target="_blank"><b>36</b></a>
+</font>
+<br>
+熊本
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00250101.html?c=28399&ym=202609&d=25" target="_blank"><b>55</b></a>
+</font>
+<br>
+久留米
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">17</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" height="28" nowrap></td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00266901.html?c=28399&ym=202609&d=25" target="_blank"><b>06</b></a>
+</font>
+<br>
+大牟田
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00263401.html?c=28399&ym=202609&d=25" target="_blank"><b>10</b></a>
+</font>
+<br>
+久留米
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00247101.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>36</b></a>
+</font>
+<br>
+羽犬塚
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00267001.html?c=28399&ym=202609&d=25" target="_blank"><b>41</b></a>
+</font>
+<br>
+大牟田
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0021/00212803.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>51</b></a>
+</font>
+<br>
+羽犬塚
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">18</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+ゆふ
+5<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0016/00167301.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>58</b></a>
+</font>
+<br>
+大分
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00250501.html?c=28399&ym=202609&d=25" target="_blank"><b>03</b></a>
+</font>
+<br>
+大牟田
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00250201.html?c=28399&ym=202609&d=25" target="_blank"><b>07</b></a>
+</font>
+<br>
+荒木
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00250401.html?c=28399&ym=202609&d=25" target="_blank"><b>30</b></a>
+</font>
+<br>
+大牟田
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00247202.html?c=28399&ym=202609&d=25" target="_blank"><b>34</b></a>
+</font>
+<br>
+久留米
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0021/00213003.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>53</b></a>
+</font>
+<br>
+大牟田
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">19</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" height="28" nowrap></td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00288101.html?c=28399&ym=202609&d=25" target="_blank"><b>05</b></a>
+</font>
+<br>
+大牟田
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00247302.html?c=28399&ym=202609&d=25" target="_blank"><b>14</b></a>
+</font>
+<br>
+羽犬塚
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00288301.html?c=28399&ym=202609&d=25" target="_blank"><b>29</b></a>
+</font>
+<br>
+荒尾
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00247402.html?c=28399&ym=202609&d=25" target="_blank"><b>36</b></a>
+</font>
+<br>
+久留米
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00250701.html?c=28399&ym=202609&d=25" target="_blank"><b>50</b></a>
+</font>
+<br>
+荒木
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00240703.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>58</b></a>
+</font>
+<br>
+荒尾
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">20</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" height="28" nowrap></td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00247503.html?c=28399&ym=202609&d=25" target="_blank"><b>11</b></a>
+</font>
+<br>
+久留米
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0026/00266401.html?c=28399&ym=202609&d=25" target="_blank"><b>16</b></a>
+</font>
+<br>
+宇土
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00240803.html?c=28399&ym=202609&d=25" target="_blank"><b>37</b></a>
+</font>
+<br>
+荒尾
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00250901.html?c=28399&ym=202609&d=25" target="_blank"><b>45</b></a>
+</font>
+<br>
+久留米
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00247603.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>54</b></a>
+</font>
+<br>
+羽犬塚
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">21</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" height="28" nowrap></td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00247702.html?c=28399&ym=202609&d=25" target="_blank"><b>13</b></a>
+</font>
+<br>
+荒木
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00241901.html?c=28399&ym=202609&d=25" target="_blank"><b>16</b></a>
+</font>
+<br>
+熊本
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="blue">
+快<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00247802.html?c=28399&ym=202609&d=25" target="_blank" style="color:blue"><b>45</b></a>
+</font>
+<br>
+荒木
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00288401.html?c=28399&ym=202609&d=25" target="_blank"><b>52</b></a>
+</font>
+<br>
+熊本
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">22</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" height="28" nowrap></td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00288601.html?c=28399&ym=202609&d=25" target="_blank"><b>22</b></a>
+</font>
+<br>
+大牟田
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00251002.html?c=28399&ym=202609&d=25" target="_blank"><b>38</b></a>
+</font>
+<br>
+羽犬塚
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">23</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" height="28" nowrap></td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00251101.html?c=28399&ym=202609&d=25" target="_blank"><b>09</b></a>
+</font>
+<br>
+久留米
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0024/00240902.html?c=28399&ym=202609&d=25" target="_blank"><b>34</b></a>
+</font>
+<br>
+荒尾
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">0</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" height="28" nowrap></td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00251201.html?c=28399&ym=202609&d=25" target="_blank"><b>03</b></a>
+</font>
+<br>
+久留米
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0025/00251301.html?c=28399&ym=202609&d=25" target="_blank"><b>28</b></a>
+</font>
+<br>
+久留米
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><br></td>
+</tr>
+<tr>
+<td nowrap valign="top" align="center">
+<table class="timetable">
+<tr><td align="right"><button type="button" name="print_page" onclick="go_printpage(2);" style="font-size:110%;font-weight:bold;">印刷</button></td></tr>
+<tr><td>
+<TABLE border="1" bordercolor="#696969" cellpadding="2" cellspacing="0">
+<tr>
+<th align=center colspan="3" nowrap bgcolor="#add8e6">
+<div align="center" style="font-size:15px">長崎本線・佐世保線 佐賀・江北・諫早・長崎／佐世保・ハウステンボス方面（下り）</div>
+</th>
+</tr>
+<!-- 時刻表 -->
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">6</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+1<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0018/00189101.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>22</b></a>
+</font>
+<br>
+武雄温泉（長崎）
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+3<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0018/00189201.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>55</b></a>
+</font>
+<br>
+武雄温泉（長崎）
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0029/00291501.html?c=28399&ym=202609&d=25" target="_blank"><b>06</b></a>
+</font>
+<br>
+佐世保
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0027/00270501.html?c=28399&ym=202609&d=25" target="_blank"><b>26</b></a>
+</font>
+<br>
+佐賀
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0022/00220201.html?c=28399&ym=202609&d=25" target="_blank"><b>42</b></a>
+</font>
+<br>
+佐賀
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">7</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+5<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0018/00189301.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>40</b></a>
+</font>
+<br>
+武雄温泉（長崎）
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+7<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0008/00085901.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>57</b></a>
+</font>
+<br>
+佐世保
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0006/00061201.html?c=28399&ym=202609&d=25" target="_blank"><b>00</b></a>
+</font>
+<br>
+佐賀
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0022/00220301.html?c=28399&ym=202609&d=25" target="_blank"><b>20</b></a>
+</font>
+<br>
+江北
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0022/00220401.html?c=28399&ym=202609&d=25" target="_blank"><b>51</b></a>
+</font>
+<br>
+江北
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">8</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+かささぎ
+101<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00194101.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>19</b></a>
+</font>
+<br>
+肥前鹿島
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+9<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0018/00189401.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>40</b></a>
+</font>
+<br>
+武雄温泉（長崎）
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0022/00220501.html?c=28399&ym=202609&d=25" target="_blank"><b>09</b></a>
+</font>
+<br>
+佐賀
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0027/00270601.html?c=28399&ym=202609&d=25" target="_blank"><b>49</b></a>
+</font>
+<br>
+肥前浜
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">9</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+11<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0008/00085801.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>02</b></a>
+</font>
+<br>
+佐世保
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+ハウステンボス
+11<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0008/00085801.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>02</b></a>
+</font>
+<br>
+ハウステンボス
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+13<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0018/00189501.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>16</b></a>
+</font>
+<br>
+武雄温泉（長崎）
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+101<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00286701.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>37</b></a>
+</font>
+<br>
+武雄温泉
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+15<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0002/00021601.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>56</b></a>
+</font>
+<br>
+佐世保
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+ハウステンボス
+15<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0002/00021601.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>56</b></a>
+</font>
+<br>
+ハウステンボス
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0029/00291601.html?c=28399&ym=202609&d=25" target="_blank"><b>22</b></a>
+</font>
+<br>
+肥前浜
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">10</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+17<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0018/00189601.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>23</b></a>
+</font>
+<br>
+武雄温泉（長崎）
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+19<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0008/00085601.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>58</b></a>
+</font>
+<br>
+佐世保
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+ハウステンボス
+19<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0008/00085601.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>58</b></a>
+</font>
+<br>
+ハウステンボス
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0029/00291701.html?c=28399&ym=202609&d=25" target="_blank"><b>02</b></a>
+</font>
+<br>
+肥前鹿島
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0027/00270701.html?c=28399&ym=202609&d=25" target="_blank"><b>53</b></a>
+</font>
+<br>
+肥前浜
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">11</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+21<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0018/00189701.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>16</b></a>
+</font>
+<br>
+武雄温泉（長崎）
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+23<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0008/00085501.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>59</b></a>
+</font>
+<br>
+佐世保
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0027/00270801.html?c=28399&ym=202609&d=25" target="_blank"><b>22</b></a>
+</font>
+<br>
+江北
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">12</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+25<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0018/00189801.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>15</b></a>
+</font>
+<br>
+武雄温泉（長崎）
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+27<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0002/00021701.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>59</b></a>
+</font>
+<br>
+佐世保
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+ハウステンボス
+27<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0002/00021701.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>59</b></a>
+</font>
+<br>
+ハウステンボス
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0027/00270901.html?c=28399&ym=202609&d=25" target="_blank"><b>03</b></a>
+</font>
+<br>
+肥前鹿島
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0027/00271001.html?c=28399&ym=202609&d=25" target="_blank"><b>46</b></a>
+</font>
+<br>
+肥前浜
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">13</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+29<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0018/00189901.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>15</b></a>
+</font>
+<br>
+武雄温泉（長崎）
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+かささぎ
+103<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00194501.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>38</b></a>
+</font>
+<br>
+肥前鹿島
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+31<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0002/00021801.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>59</b></a>
+</font>
+<br>
+佐世保
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+ハウステンボス
+31<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0002/00021801.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>59</b></a>
+</font>
+<br>
+ハウステンボス
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0027/00271101.html?c=28399&ym=202609&d=25" target="_blank"><b>07</b></a>
+</font>
+<br>
+肥前鹿島
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0027/00271201.html?c=28399&ym=202609&d=25" target="_blank"><b>48</b></a>
+</font>
+<br>
+江北
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">14</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+33<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00190001.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>15</b></a>
+</font>
+<br>
+武雄温泉（長崎）
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+35<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00192801.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>59</b></a>
+</font>
+<br>
+佐世保
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0006/00069401.html?c=28399&ym=202609&d=25" target="_blank"><b>20</b></a>
+</font>
+<br>
+肥前鹿島
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0022/00220601.html?c=28399&ym=202609&d=25" target="_blank"><b>49</b></a>
+</font>
+<br>
+肥前浜
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">15</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+37<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00190101.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>15</b></a>
+</font>
+<br>
+武雄温泉（長崎）
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+39<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00192901.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>58</b></a>
+</font>
+<br>
+佐世保
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0022/00220701.html?c=28399&ym=202609&d=25" target="_blank"><b>31</b></a>
+</font>
+<br>
+江北
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0022/00220801.html?c=28399&ym=202609&d=25" target="_blank"><b>49</b></a>
+</font>
+<br>
+肥前浜
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">16</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+41<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00190201.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>17</b></a>
+</font>
+<br>
+武雄温泉（長崎）
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+43<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00190301.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>38</b></a>
+</font>
+<br>
+武雄温泉（長崎）
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+45<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00286801.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>58</b></a>
+</font>
+<br>
+佐世保
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0022/00220901.html?c=28399&ym=202609&d=25" target="_blank"><b>26</b></a>
+</font>
+<br>
+江北
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0022/00221001.html?c=28399&ym=202609&d=25" target="_blank"><b>52</b></a>
+</font>
+<br>
+江北
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">17</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+47<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00190401.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>20</b></a>
+</font>
+<br>
+武雄温泉（長崎）
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+かささぎ
+105<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00193901.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>39</b></a>
+</font>
+<br>
+肥前鹿島
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり（リレーかもめ）
+49<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00190501.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>56</b></a>
+</font>
+<br>
+佐世保（長崎）
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0029/00291801.html?c=28399&ym=202609&d=25" target="_blank"><b>12</b></a>
+</font>
+<br>
+早岐
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0029/00291901.html?c=28399&ym=202609&d=25" target="_blank"><b>44</b></a>
+</font>
+<br>
+江北
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">18</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+51<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00190601.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>24</b></a>
+</font>
+<br>
+武雄温泉（長崎）
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり（リレーかもめ）
+53<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00190701.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>39</b></a>
+</font>
+<br>
+佐世保（長崎）
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0027/00271301.html?c=28399&ym=202609&d=25" target="_blank"><b>10</b></a>
+</font>
+<br>
+江北
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0029/00292001.html?c=28399&ym=202609&d=25" target="_blank"><b>32</b></a>
+</font>
+<br>
+肥前浜
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">19</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+かささぎ
+107<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00194601.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>02</b></a>
+</font>
+<br>
+肥前鹿島
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+55<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00190801.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>20</b></a>
+</font>
+<br>
+武雄温泉（長崎）
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり（リレーかもめ）
+57<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00190901.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>40</b></a>
+</font>
+<br>
+佐世保（長崎）
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00288201.html?c=28399&ym=202609&d=25" target="_blank"><b>11</b></a>
+</font>
+<br>
+早岐
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0027/00271401.html?c=28399&ym=202609&d=25" target="_blank"><b>31</b></a>
+</font>
+<br>
+肥前浜
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">20</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+かささぎ
+109<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00194701.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>01</b></a>
+</font>
+<br>
+肥前鹿島
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+59<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00286901.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>23</b></a>
+</font>
+<br>
+武雄温泉（長崎）
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+61<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00287001.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>56</b></a>
+</font>
+<br>
+佐世保
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0029/00292101.html?c=28399&ym=202609&d=25" target="_blank"><b>05</b></a>
+</font>
+<br>
+早岐
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0027/00271501.html?c=28399&ym=202609&d=25" target="_blank"><b>28</b></a>
+</font>
+<br>
+肥前浜
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">21</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+63<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00287101.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>23</b></a>
+</font>
+<br>
+武雄温泉（長崎）
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+65<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00287201.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>56</b></a>
+</font>
+<br>
+佐世保
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0029/00292301.html?c=28399&ym=202609&d=25" target="_blank"><b>09</b></a>
+</font>
+<br>
+早岐
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0029/00292401.html?c=28399&ym=202609&d=25" target="_blank"><b>46</b></a>
+</font>
+<br>
+江北
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">22</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+リレーかもめ
+67<br>
+（＆かもめ）
+<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00287301.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>33</b></a>
+</font>
+<br>
+武雄温泉（長崎）
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+みどり
+69<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00287401.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>54</b></a>
+</font>
+<br>
+佐世保
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00288501.html?c=28399&ym=202609&d=25" target="_blank"><b>10</b></a>
+</font>
+<br>
+早岐
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<TH ALIGN="center" VALIGN="middle" BGCOLOR="#000080" WIDTH="23">
+<DIV STYLE="font-size:15px">
+<FONT COLOR="#FFFFFF">23</FONT>
+</DIV>
+</TH>
+<!-- 特急・急行 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1" color="red">
+かささぎ
+201<br>
+<font size="+1">
+<a href="/jr-k_time/2610/0019/00194201.html?c=28399&ym=202609&d=25" target="_blank" style="color:red"><b>47</b></a>
+</font>
+<br>
+佐賀
+</font>
+</td>
+</tr>
+</table>
+</td>
+<!-- 特急・急行以外の列車 -->
+<td width="200">
+<table border="0" cellspacing="5">
+<tr>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0028/00288701.html?c=28399&ym=202609&d=25" target="_blank"><b>00</b></a>
+</font>
+<br>
+江北
+</font>
+</td>
+<td class=back5 valign="bottom" align="center" nowrap>
+<font size="1">
+<font size="+1">
+<a href="/jr-k_time/2610/0029/00292501.html?c=28399&ym=202609&d=25" target="_blank"><b>36</b></a>
+</font>
+<br>
+江北
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><br></td>
+</tr>
+</table>
+<!-- hidden -->
+<input type="hidden" name="c" value="28399">
+<input type="hidden" name="n" value="鳥栖駅">
+<input type="hidden" name="pg" value="0	1	2">
+<input type="hidden" name="dir_cnt" value="">
+<input type="hidden" name="all" value="3">
+</td>
+</tr>
+</table>
+</div>
+</form>
+<HR size="1">
+<img src="../../jr-k_time/imgs_index/copyright.gif" alt="Copyright" title="Copyright">
+</body>
+</html>

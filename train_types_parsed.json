@@ -1,0 +1,716 @@
+{
+  "05:13": {
+    "type": "普通",
+    "dest": "大牟田",
+    "sub_info": "",
+    "before": "",
+    "after": "大牟田"
+  },
+  "05:52": {
+    "type": "普通",
+    "dest": "鳥栖",
+    "sub_info": "",
+    "before": "",
+    "after": "鳥栖"
+  },
+  "06:20": {
+    "type": "区間快速",
+    "dest": "荒尾",
+    "sub_info": "南福岡～大牟田間快速",
+    "before": "",
+    "after": "荒尾\n   南福岡～大牟田間快速"
+  },
+  "06:35": {
+    "type": "普通",
+    "dest": "江北",
+    "sub_info": "",
+    "before": "",
+    "after": "江北 &nbsp;"
+  },
+  "06:56": {
+    "type": "普通",
+    "dest": "大牟田",
+    "sub_info": "",
+    "before": "",
+    "after": "大牟田 &nbsp;"
+  },
+  "07:05": {
+    "type": "普通",
+    "dest": "荒尾",
+    "sub_info": "",
+    "before": "",
+    "after": "荒尾"
+  },
+  "07:20": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市"
+  },
+  "07:25": {
+    "type": "普通",
+    "dest": "南福岡",
+    "sub_info": "",
+    "before": "",
+    "after": "南福岡"
+  },
+  "07:33": {
+    "type": "普通",
+    "dest": "鳥栖",
+    "sub_info": "",
+    "before": "",
+    "after": "鳥栖"
+  },
+  "07:41": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市"
+  },
+  "07:46": {
+    "type": "快速",
+    "dest": "南福岡",
+    "sub_info": "",
+    "before": "快",
+    "after": "南福岡"
+  },
+  "07:52": {
+    "type": "快速",
+    "dest": "羽犬塚",
+    "sub_info": "",
+    "before": "快",
+    "after": "羽犬塚"
+  },
+  "07:59": {
+    "type": "普通",
+    "dest": "久留米",
+    "sub_info": "",
+    "before": "",
+    "after": "久留米"
+  },
+  "08:03": {
+    "type": "普通",
+    "dest": "南福岡",
+    "sub_info": "",
+    "before": "",
+    "after": "南福岡"
+  },
+  "08:09": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市"
+  },
+  "08:19": {
+    "type": "快速",
+    "dest": "南福岡",
+    "sub_info": "",
+    "before": "快",
+    "after": "南福岡"
+  },
+  "08:24": {
+    "type": "普通",
+    "dest": "久留米",
+    "sub_info": "",
+    "before": "",
+    "after": "久留米"
+  },
+  "08:27": {
+    "type": "普通",
+    "dest": "南福岡",
+    "sub_info": "",
+    "before": "",
+    "after": "南福岡"
+  },
+  "08:34": {
+    "type": "普通",
+    "dest": "南福岡",
+    "sub_info": "",
+    "before": "",
+    "after": "南福岡"
+  },
+  "08:42": {
+    "type": "快速",
+    "dest": "鳥栖",
+    "sub_info": "",
+    "before": "快",
+    "after": "鳥栖"
+  },
+  "08:49": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市"
+  },
+  "08:57": {
+    "type": "普通",
+    "dest": "鳥栖",
+    "sub_info": "",
+    "before": "",
+    "after": "鳥栖"
+  },
+  "09:03": {
+    "type": "快速",
+    "dest": "南福岡",
+    "sub_info": "",
+    "before": "快",
+    "after": "南福岡 &nbsp;"
+  },
+  "09:13": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市 &nbsp;"
+  },
+  "09:24": {
+    "type": "区間快速",
+    "dest": "鳥栖",
+    "sub_info": "二日市から各駅停車",
+    "before": "区快",
+    "after": "鳥栖\n   二日市から各駅停車"
+  },
+  "09:28": {
+    "type": "普通",
+    "dest": "南福岡",
+    "sub_info": "",
+    "before": "",
+    "after": "南福岡 &nbsp;"
+  },
+  "09:36": {
+    "type": "普通",
+    "dest": "鳥栖",
+    "sub_info": "",
+    "before": "",
+    "after": "鳥栖 &nbsp;"
+  },
+  "09:54": {
+    "type": "普通",
+    "dest": "久留米",
+    "sub_info": "",
+    "before": "",
+    "after": "久留米 &nbsp;"
+  },
+  "10:08": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市"
+  },
+  "10:18": {
+    "type": "普通",
+    "dest": "南福岡",
+    "sub_info": "",
+    "before": "",
+    "after": "南福岡"
+  },
+  "10:26": {
+    "type": "快速",
+    "dest": "羽犬塚",
+    "sub_info": "",
+    "before": "快",
+    "after": "羽犬塚"
+  },
+  "10:36": {
+    "type": "普通",
+    "dest": "荒木",
+    "sub_info": "",
+    "before": "",
+    "after": "荒木"
+  },
+  "10:56": {
+    "type": "快速",
+    "dest": "羽犬塚",
+    "sub_info": "",
+    "before": "快",
+    "after": "羽犬塚"
+  },
+  "11:06": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市 &nbsp;"
+  },
+  "11:26": {
+    "type": "区間快速",
+    "dest": "鳥栖",
+    "sub_info": "二日市から各駅停車",
+    "before": "区快",
+    "after": "鳥栖\n   二日市から各駅停車"
+  },
+  "11:33": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市 &nbsp;"
+  },
+  "11:47": {
+    "type": "普通",
+    "dest": "久留米",
+    "sub_info": "",
+    "before": "",
+    "after": "久留米 &nbsp;"
+  },
+  "12:02": {
+    "type": "快速",
+    "dest": "羽犬塚",
+    "sub_info": "",
+    "before": "快",
+    "after": "羽犬塚 &nbsp;"
+  },
+  "12:09": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市 &nbsp;"
+  },
+  "12:26": {
+    "type": "区間快速",
+    "dest": "鳥栖",
+    "sub_info": "二日市から各駅停車",
+    "before": "区快",
+    "after": "鳥栖\n   二日市から各駅停車"
+  },
+  "12:43": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市 &nbsp;"
+  },
+  "12:59": {
+    "type": "快速",
+    "dest": "羽犬塚",
+    "sub_info": "",
+    "before": "快",
+    "after": "羽犬塚 &nbsp;"
+  },
+  "13:01": {
+    "type": "普通",
+    "dest": "久留米",
+    "sub_info": "",
+    "before": "",
+    "after": "久留米 &nbsp;"
+  },
+  "13:13": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市 &nbsp;"
+  },
+  "13:26": {
+    "type": "区間快速",
+    "dest": "鳥栖",
+    "sub_info": "二日市から各駅停車",
+    "before": "区快",
+    "after": "鳥栖\n   二日市から各駅停車"
+  },
+  "13:43": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市 &nbsp;"
+  },
+  "13:59": {
+    "type": "快速",
+    "dest": "羽犬塚",
+    "sub_info": "",
+    "before": "快",
+    "after": "羽犬塚 &nbsp;"
+  },
+  "14:01": {
+    "type": "普通",
+    "dest": "久留米",
+    "sub_info": "",
+    "before": "",
+    "after": "久留米 &nbsp;"
+  },
+  "14:13": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市 &nbsp;"
+  },
+  "14:26": {
+    "type": "区間快速",
+    "dest": "鳥栖",
+    "sub_info": "二日市から各駅停車",
+    "before": "区快",
+    "after": "鳥栖\n   二日市から各駅停車"
+  },
+  "14:41": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市 &nbsp;"
+  },
+  "14:59": {
+    "type": "快速",
+    "dest": "羽犬塚",
+    "sub_info": "",
+    "before": "快",
+    "after": "羽犬塚 &nbsp;"
+  },
+  "15:01": {
+    "type": "普通",
+    "dest": "久留米",
+    "sub_info": "",
+    "before": "",
+    "after": "久留米 &nbsp;"
+  },
+  "15:13": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市 &nbsp;"
+  },
+  "15:26": {
+    "type": "区間快速",
+    "dest": "鳥栖",
+    "sub_info": "二日市から各駅停車",
+    "before": "区快",
+    "after": "鳥栖\n   二日市から各駅停車"
+  },
+  "15:37": {
+    "type": "普通",
+    "dest": "鳥栖",
+    "sub_info": "",
+    "before": "",
+    "after": "鳥栖 &nbsp;"
+  },
+  "15:49": {
+    "type": "快速",
+    "dest": "羽犬塚",
+    "sub_info": "",
+    "before": "快",
+    "after": "羽犬塚 &nbsp;"
+  },
+  "15:58": {
+    "type": "普通",
+    "dest": "鳥栖",
+    "sub_info": "",
+    "before": "",
+    "after": "鳥栖 &nbsp;"
+  },
+  "16:02": {
+    "type": "快速",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "快",
+    "after": "二日市 &nbsp;"
+  },
+  "16:10": {
+    "type": "普通",
+    "dest": "久留米",
+    "sub_info": "",
+    "before": "",
+    "after": "久留米 &nbsp;"
+  },
+  "16:25": {
+    "type": "区間快速",
+    "dest": "久留米",
+    "sub_info": "二日市から各駅停車",
+    "before": "区快",
+    "after": "久留米\n   二日市から各駅停車"
+  },
+  "16:38": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市 &nbsp;"
+  },
+  "16:45": {
+    "type": "快速",
+    "dest": "鳥栖",
+    "sub_info": "",
+    "before": "快",
+    "after": "鳥栖 &nbsp;"
+  },
+  "16:55": {
+    "type": "普通",
+    "dest": "鳥栖",
+    "sub_info": "",
+    "before": "",
+    "after": "鳥栖 &nbsp;"
+  },
+  "17:04": {
+    "type": "快速",
+    "dest": "羽犬塚",
+    "sub_info": "",
+    "before": "快",
+    "after": "羽犬塚"
+  },
+  "17:12": {
+    "type": "普通",
+    "dest": "荒木",
+    "sub_info": "",
+    "before": "",
+    "after": "荒木"
+  },
+  "17:20": {
+    "type": "快速",
+    "dest": "羽犬塚",
+    "sub_info": "",
+    "before": "快",
+    "after": "羽犬塚"
+  },
+  "17:26": {
+    "type": "普通",
+    "dest": "鳥栖",
+    "sub_info": "",
+    "before": "",
+    "after": "鳥栖"
+  },
+  "17:36": {
+    "type": "普通",
+    "dest": "南福岡",
+    "sub_info": "",
+    "before": "",
+    "after": "南福岡"
+  },
+  "17:39": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市"
+  },
+  "17:45": {
+    "type": "普通",
+    "dest": "大牟田",
+    "sub_info": "",
+    "before": "",
+    "after": "大牟田"
+  },
+  "17:54": {
+    "type": "普通",
+    "dest": "早岐",
+    "sub_info": "",
+    "before": "",
+    "after": "早岐"
+  },
+  "18:04": {
+    "type": "区間快速",
+    "dest": "久留米",
+    "sub_info": "鳥栖から各駅停車",
+    "before": "区快",
+    "after": "久留米\n   鳥栖から各駅停車"
+  },
+  "18:14": {
+    "type": "普通",
+    "dest": "鳥栖",
+    "sub_info": "",
+    "before": "",
+    "after": "鳥栖 &nbsp;"
+  },
+  "18:23": {
+    "type": "快速",
+    "dest": "大牟田",
+    "sub_info": "",
+    "before": "快",
+    "after": "大牟田 &nbsp;"
+  },
+  "18:33": {
+    "type": "普通",
+    "dest": "鳥栖",
+    "sub_info": "",
+    "before": "",
+    "after": "鳥栖 &nbsp;"
+  },
+  "18:42": {
+    "type": "区間快速",
+    "dest": "羽犬塚",
+    "sub_info": "南福岡まで各駅停車",
+    "before": "区快",
+    "after": "羽犬塚\n   南福岡まで各駅停車"
+  },
+  "18:54": {
+    "type": "普通",
+    "dest": "荒木",
+    "sub_info": "",
+    "before": "",
+    "after": "荒木 &nbsp;"
+  },
+  "19:07": {
+    "type": "区間快速",
+    "dest": "久留米",
+    "sub_info": "鳥栖から各駅停車",
+    "before": "区快",
+    "after": "久留米\n   鳥栖から各駅停車"
+  },
+  "19:15": {
+    "type": "普通",
+    "dest": "鳥栖",
+    "sub_info": "",
+    "before": "",
+    "after": "鳥栖 &nbsp;"
+  },
+  "19:26": {
+    "type": "快速",
+    "dest": "荒尾",
+    "sub_info": "",
+    "before": "快",
+    "after": "荒尾 &nbsp;"
+  },
+  "19:29": {
+    "type": "普通",
+    "dest": "鳥栖",
+    "sub_info": "",
+    "before": "",
+    "after": "鳥栖 &nbsp;"
+  },
+  "19:42": {
+    "type": "区間快速",
+    "dest": "久留米",
+    "sub_info": "鳥栖から各駅停車",
+    "before": "区快",
+    "after": "久留米\n   鳥栖から各駅停車"
+  },
+  "19:54": {
+    "type": "普通",
+    "dest": "久留米",
+    "sub_info": "",
+    "before": "",
+    "after": "久留米 &nbsp;"
+  },
+  "20:06": {
+    "type": "区間快速",
+    "dest": "荒尾",
+    "sub_info": "鳥栖から各駅停車",
+    "before": "区快",
+    "after": "荒尾\n   鳥栖から各駅停車"
+  },
+  "20:12": {
+    "type": "普通",
+    "dest": "鳥栖",
+    "sub_info": "",
+    "before": "",
+    "after": "鳥栖 &nbsp;"
+  },
+  "20:22": {
+    "type": "快速",
+    "dest": "羽犬塚",
+    "sub_info": "",
+    "before": "快",
+    "after": "羽犬塚 &nbsp;"
+  },
+  "20:35": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市 &nbsp;"
+  },
+  "20:43": {
+    "type": "区間快速",
+    "dest": "荒木",
+    "sub_info": "鳥栖から各駅停車",
+    "before": "区快",
+    "after": "荒木\n   鳥栖から各駅停車"
+  },
+  "20:47": {
+    "type": "普通",
+    "dest": "鳥栖",
+    "sub_info": "",
+    "before": "",
+    "after": "鳥栖 &nbsp;"
+  },
+  "21:05": {
+    "type": "普通",
+    "dest": "早岐",
+    "sub_info": "",
+    "before": "",
+    "after": "早岐"
+  },
+  "21:14": {
+    "type": "快速",
+    "dest": "荒木",
+    "sub_info": "",
+    "before": "快",
+    "after": "荒木"
+  },
+  "21:28": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市"
+  },
+  "21:44": {
+    "type": "普通",
+    "dest": "羽犬塚",
+    "sub_info": "",
+    "before": "",
+    "after": "羽犬塚"
+  },
+  "21:49": {
+    "type": "快速",
+    "dest": "鳥栖",
+    "sub_info": "",
+    "before": "快",
+    "after": "鳥栖"
+  },
+  "22:00": {
+    "type": "普通",
+    "dest": "江北",
+    "sub_info": "",
+    "before": "",
+    "after": "江北 &nbsp;"
+  },
+  "22:20": {
+    "type": "普通",
+    "dest": "久留米",
+    "sub_info": "",
+    "before": "",
+    "after": "久留米 &nbsp;"
+  },
+  "22:45": {
+    "type": "普通",
+    "dest": "二日市",
+    "sub_info": "",
+    "before": "",
+    "after": "二日市 &nbsp;"
+  },
+  "22:54": {
+    "type": "区間快速",
+    "dest": "荒尾",
+    "sub_info": "二日市から各駅停車",
+    "before": "区快",
+    "after": "荒尾\n   二日市から各駅停車"
+  },
+  "23:16": {
+    "type": "普通",
+    "dest": "久留米",
+    "sub_info": "",
+    "before": "",
+    "after": "久留米"
+  },
+  "23:46": {
+    "type": "普通",
+    "dest": "久留米",
+    "sub_info": "",
+    "before": "",
+    "after": "久留米"
+  },
+  "00:16": {
+    "type": "普通",
+    "dest": "南福岡",
+    "sub_info": "",
+    "before": "",
+    "after": "南福岡"
+  }
+}
